@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+<title>这是标题</title>
+
+</head>
+<body>
+
+
+<input type="text" value="2" id="rows"><!--定义文本框，指定表格的行-->
+<input type="text" value="3" id="cols"><!--定义文本框，指定表格的列-->
+<input type="button" value="创建表单" onclick="creatTab()"><!--定义一个button，调用creatTab（）函数-->
+<div id="div1"></div><!--定义一个div，命名为div1-->
+
+
+<script>
+function creatTab()//定义一个creatTab函数
+{
+rows=document.getElementById('rows').value//获取rows中的value
+cols=document.getElementById('cols').value//获取cols中的value
+div1=document.getElementById('div1')//获取div1
+var tab="<table border=1 width=500>"//定义表格的边框为1，宽度为500
+for(var i=0;i<rows;i++)//定义i=0，若i小于row的value，i自加1
+{
+    tab+='<tr>'//字符串拼接
+    for(var j=0;j<cols;j++)//定义j=0，若j小于cols的value，j自加1
+    {
+        tab+="<td style='background:green'>"+i+j+"</td>"//i和j通过字符串拼接显示在每一个格子里
+
+    }
+    tab+='</tr>'
+}
+tab+='</table>';
+alert(tab)
+div1.innerHTML=tab
+
+}
+  
+
+</script>
+</body>
+</html>

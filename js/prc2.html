@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+<head>
+<title>这是标题</title>
+<style>
+    .one{float: left;}
+    </style>
+</head>
+<body>
+<div class="one">
+<a href="prc1.html">我的第一个JavaScript程序</a></br>
+<a href="prc2.html">JavaScript能改变html元素的内容</a></br>
+<a href="prc3.html">javascript的输出</a></br>
+<a href="prc4.html">javascript的语法</a></br>
+<a href="prc5.html">html中的水平线</a></br>
+<a href="prc6.html">html文本格式化</a></br>
+<a href="prc7.html">html头部</a></br>
+<a href="prc8.html">hmtl样式css</a></br>
+<a href="prc9.html">hmtl图像</a></br>
+<a href="prc10.html">hmtl表格</a></br>
+<a href="prc11.html">hmtl列表</a></br>
+<a href="prc12.html">hmtl区块</a></br>
+<a href="prc13.html">hmtl布局</a></br>
+<a href="prc14.html">hmtl表单</a></br>
+<a href="prc15.html">hmtl框架</a></br>
+</div>
+
+
+<h1>我的第一段JavaScript</h1>
+<p id="demo">
+    JavaScript能改变html元素的内容。
+</p>
+<script>
+function myFunction(){
+x=document.getElementById("demo");//找到元素
+x.innerHTML="hello javascript!";//改变内容
+}
+</script>
+<button type="button" onclick="myFunction()">点击这里</button>
+
+
+<script>
+function changeImage(){
+    Element=document.getElementById（'myimage');
+    if(Element.src.match("bulbon"))
+    {
+        Element.src="/images/pic_bulboff.gif";
+    }
+    else
+    {
+        Element.src="/images/pic_bulbon.gif";
+    }
+}
+</script>
+<img src="/images/pic_bulboff.gif" id = "myimage" onclick = "changeImage()" >
+<p>
+    点击灯泡就可以开关这盏灯
+</p>
+
+
+
+
+<p id="demo">javascript能够改变html元素的样式</p>
+<script>
+function myFunction(){
+    x=document.getElementById("demo");
+    x.style.color="#0000ff";
+}
+</script>
+<button type="button" onclick="myFunction()">点我换颜色</button>
+
+
+<input id="demo_1" type="text">
+<script>
+function myFunction()
+{
+    var x=document.getElementById("demo_1").value;
+    if(x==""||isNaN(x))//检查其参数是否是非数字值。
+    {
+        alert("不是数字");
+    }
+}
+</script>
+
+<button type="button" onclick="myFunction()">点击这里</button>
+</body>
+</html>

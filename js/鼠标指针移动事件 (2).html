@@ -10,7 +10,7 @@
 document.write("<tr>")
 for(var j=0;j<3;j++)
     {   
-document.write("<td type='button' onmouseout=aaa("+b+") onclick=changebutton()>"+b+++"</td>");
+document.write("<td type='button' onclick=aaa("+b+") ondbclick=changebutton()>"+b+++"</td>");
 }
 document.write("</tr>")
 }
@@ -19,9 +19,7 @@ document.write("</tr>")
         alert(b)
 }
 function changebutton(){
-    document.write("<form>")
-    document.write("<a href='鼠标指针移动事件.html'><input type='button' value='点击这里' width=500 border=1></a>")
-    document.write("</form>")
+    document.write("<input type='button'>")
 }
     </script>
 </body>

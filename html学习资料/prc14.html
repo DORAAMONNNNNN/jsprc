@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<head>
+<title>hmtl表单</title>
+<style>
+    .one{float: left;}
+    </style>
+</head>
+<body>
+<div class="one">
+        <a href="prc1.html">hmtl基本结构</a></br>
+        <a href="prc2.html">html的标题标签</a></br>
+        <a href="prc3.html">html中的段落标签</a></br>
+        <a href="prc4.html">不会在网页中显示的注释</a></br>
+        <a href="prc5.html">html中的水平线</a></br>
+        <a href="prc6.html">html文本格式化</a></br>
+        <a href="prc7.html">html头部</a></br>
+        <a href="prc8.html">hmtl样式css</a></br>
+        <a href="prc9.html">hmtl图像</a></br>
+        <a href="prc10.html">hmtl表格</a></br>
+        <a href="prc11.html">hmtl列表</a></br>
+        <a href="prc12.html">hmtl区块</a></br>
+        <a href="prc13.html">hmtl布局</a></br>
+        <a href="prc14.html">hmtl表单</a></br>
+        <a href="prc15.html">hmtl框架</a></br>
+</div>
+<div>
+<p>
+    表单是一个包含表单元素的区域
+    表单元素允许用户在表单中输入内容，如文本域（textarea），下拉列表，单选框（radio-buttons）,复选框（checkboxes）等等
+    表单使用表单标签form来设置
+    多数情况下被用到的表单标签是输入标签input.输入类型是由type定义的
+    <h1>文本域</h1>
+    <p>文本域通过input type="text"设定
+        <form>
+       firstname: <input type="text" name="firstname"><br>
+       lastname: <input type="text" name="lastname">
+    </form>
+    </p>
+    <h1>密码字段</h1>
+    <p>密码字段通过标签input type = “ password”来定义</p>
+    <form>
+        Password：<input type="password" name="pwd">
+    </form>
+    <h1>单选按钮input type="radio"</h1>
+    <form>
+        <input type="radio" name="sex" value="male">Male<br>
+        <input type="radio" name="sex" value="female">Female
+    </form>
+    <h1>复选框</h1>
+    <form>
+        <input type="checkbox" name="vehicle" value="Bike">I have a bike <br>
+        <input type="checkbox" name="vehicle" value="Car">I have a car
+    </form>
+    <h1>提交按钮submitbutton</h1>
+    <form action="" name="input" method="GET">
+        Username:<input type="text" name="user">
+        <input type="submit" value="Submit">
+    </form>
+     <h1>
+         简单的下拉按钮
+     </h1>
+<form action="">
+    <select name="cars" id="">
+        <option value="volvo">沃尔沃</option>
+        <option value="saab">saab</option>
+        <option value="fiat">菲亚特</option>
+        <option value="audi">奥迪</option>
+    </select>
+</form> 
+  <p>预选的下拉列表，在value后添加selected</p>
+
+</p>
+<h1>文本框textarea</h1>
+<textarea name="" id="" cols="30" rows="10">
+    文档框
+</textarea>
+
+</div>
+</body>
+</html>

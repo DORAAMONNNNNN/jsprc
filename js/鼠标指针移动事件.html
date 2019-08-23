@@ -10,19 +10,23 @@
 document.write("<tr>")
 for(var j=0;j<3;j++)
     {   
-document.write("<td type='button' onmouseout=aaa("+b+") onclick=changebutton()>"+b+++"</td>");
+        var len = b++;
+document.write("<td type='button' id='td_"+len+"' ondblclick=changebutton(this) onclick=remove("+len+","+ s +")>"+len+"</td>");
 }
 document.write("</tr>")
 }
     document.write("</table>")
-    function aaa(b){
+function aaa(b){
         alert(b)
 }
-function changebutton(){
-    document.write("<form>")
-    document.write("<a href='鼠标指针移动事件.html'><input type='button' value='点击这里'></a>")
-    document.write("</form>")
+function changebutton(obj){
+    bbb = obj.innerHTML ;
+
+    obj.innerHTML = "<input type='text' id='input_"+bbb+"'/>";
+ // obj.innerHTML = "<input type='text' name='xxxx'/>";
 }
+
+
     </script>
 </body>
 </html>

@@ -5,30 +5,44 @@
     <body>
         
 <script>
+    function out(a,b,c,d,e,f,g){
     var arr = new Array();
     arr.push("<form>");
-    arr.push("按钮<input type='button' value='按钮'><br />")
-    arr.push("文字输入框<input type='text'><br />")
-    arr.push("密码<input type='password'><br />")
+    
+    arr.push("文字输入框<input type='text' value="+a+"><br />")
+    arr.push("密码<input type='password' value="+b+"><br />")
 
-    arr.push("单选框<input type='radio' name='sex' value='male'>Male<br />")
-    arr.push("<input type='radio' name='sex' value='female'>Female<br />")
+    arr.push("单选框")
+    arr.push("<input type='radio' name='g1' value='1' checked>1")
+    arr.push("<input type='radio' name='g1' value='2'>2")
+    arr.push("<input type='radio' name='g1' value='3'>3")
+    arr.push("<input type='radio' name='g1' value='4'>4")
+    arr.push("<br/>")
 
-    arr.push("复选框<input type='checkbox' name='vehicle' value='Car'>Car<br />")
-    arr.push("<input type='checkbox' name='vehicle' value='Bike'>Bike<br />")
+    arr.push("复选框")
+    arr.push("<input type='checkbox' name='g2' value='1'>1")
+    arr.push("<input type='checkbox' name='g2' value='2'>2")
+    arr.push("<input type='checkbox' name='g2' value='3'>3")
+    arr.push("<input type='checkbox' name='g2' value='4'>4")
+    arr.push("<br/>")
 
-    arr.push("提交按钮<input type='submit' value='Submit'><br />")
+    arr.push("文本域<textarea row='10' cols='20'>"+c+"</textarea><br />")
 
-    arr.push("文本域<textarea row='10' cols='20' ></textarea><br />")
-
-    arr.push("简单下拉列表<select name='cars'>")
+    arr.push("简单下拉列表")
+    arr.push("<select name='g5'>")
     arr.push("<option value='1'>1</option>")
     arr.push("<option value='2'>2</option>")
     arr.push("<option value='3'>3</option>")
+    arr.push("<option value='4'>4</option>")
     arr.push("</select>")
     arr.push("</form>")
-   
-document.write(arr.join(""));
+
+
+    arr.push("提交按钮<input type='submit' value='Submit'><br />")
+    arr.push("按钮<input type='button' value='按钮'><br />")
+    return arr.join("");
+   }
+document.write(out("xxx"));
 
   </script> 
 </body>

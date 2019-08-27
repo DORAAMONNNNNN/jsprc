@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        
+<script>
+var arr = ["1","2","3","4"]
+function out(a,b,c){
+document.write("<form>")
+document.write("<select>");
+for(i=0;i<arr.length;i++){
+    document.write("<option "+(a==i?'selected':'')+">");
+    document.write(arr[i]);
+    document.write("</option>");
+}
+document.write("</select>");
+
+
+for(i=0;i<arr.length;i++){
+    document.write("<input type='checkbox'"+(b==i?'checked':'')+" >"+arr[i]+"");
+}
+
+
+for(i=0;i<arr.length;i++){
+    document.write("<input type='radio'"+(c==i?'checked':'')+">"+arr[i]+"");
+}
+document.write("<input type='submit' value='提交'>")
+document.write("</form>")
+}
+out("1","2","3")
+
+
+
+</script> 
+</body>
+</html>

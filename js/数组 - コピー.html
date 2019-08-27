@@ -5,44 +5,49 @@
     <body>
         
 <script>
-    function out(a,b,c,d,e,f,g){
+    function out(a,b,c,d,e,f){
     var arr = new Array();
     arr.push("<form>");
     
     arr.push("文字输入框<input type='text' value="+a+"><br />")
     arr.push("密码<input type='password' value="+b+"><br />")
-
+ 
     arr.push("单选框")
-    arr.push("<input type='radio' name='g1' value='1' checked>1")
-    arr.push("<input type='radio' name='g1' value='2'>2")
-    arr.push("<input type='radio' name='g1' value='3'>3")
-    arr.push("<input type='radio' name='g1' value='4'>4")
+    arr.push("<input type='radio' name='g1' value='1'"+(f==1?'checked':'')+">1")
+    arr.push("<input type='radio' name='g1' value='2'"+(f==2?'checked':'')+">2")
+    arr.push("<input type='radio' name='g1' value='3'"+(f==3?'checked':'')+">3")
+    arr.push("<input type='radio' name='g1' value='4'"+(f==4?'checked':'')+">4")
     arr.push("<br/>")
-
+  
+  
     arr.push("复选框")
-    arr.push("<input type='checkbox' name='g2' value='1'>1")
-    arr.push("<input type='checkbox' name='g2' value='2'>2")
-    arr.push("<input type='checkbox' name='g2' value='3'>3")
-    arr.push("<input type='checkbox' name='g2' value='4'>4")
+    arr.push("<input type='checkbox' name='g2' value='1'"+(e==1?'checked':'')+">1")
+    arr.push("<input type='checkbox' name='g2' value='2'"+(e==2?'checked':'')+">2")
+    arr.push("<input type='checkbox' name='g2' value='3'"+(e==3?'checked':'')+">3")
+    arr.push("<input type='checkbox' name='g2' value='4'"+(e==4?'checked':'')+">4")
     arr.push("<br/>")
 
     arr.push("文本域<textarea row='10' cols='20'>"+c+"</textarea><br />")
 
     arr.push("简单下拉列表")
+    
+  
+    
     arr.push("<select name='g5'>")
-    arr.push("<option value='1'>1</option>")
-    arr.push("<option value='2'>2</option>")
-    arr.push("<option value='3'>3</option>")
-    arr.push("<option value='4'>4</option>")
+    arr.push("<option value='1' "+(d==1?'selected':'')+">1</option>")
+    arr.push("<option value='2' "+(d==2?'selected':'')+">2</option>")
+    arr.push("<option value='3' "+(d==3?'selected':'')+">3</option>")
+    arr.push("<option value='4' "+(d==4?'selected':'')+">4</option>")
     arr.push("</select>")
-    arr.push("</form>")
-
-
+    
+    arr.push("<input type='hidden' value='隐藏'><br />")
+    arr.push("重置按钮<input type='reset'/><br />")
     arr.push("提交按钮<input type='submit' value='Submit'><br />")
     arr.push("按钮<input type='button' value='按钮'><br />")
+    arr.push("</form>")
     return arr.join("");
    }
-document.write(out("xxx"));
+document.write(out("xxx","123456","文本域默认值","2","3","3"));
 
   </script> 
 </body>

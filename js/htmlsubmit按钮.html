@@ -1,17 +1,46 @@
 <html>
     <head>
-        <title></title>
+        <title></title>   
+         <script>
+         function myFunction(){
+        var aa= document.getElementById("text").value;
+        alert(aa)
+        if(aa == ""){
+            alert("校验失败，不进行提交");
+            return false;
+        }
+        else{
+            alert("校验成功，之后进行提交");
+            return true;
+        }
+        var bb= document.getElementById("password").value;
+        alert(bb)
+        if(bb == ""){
+            alert("校验失败，不进行提交");
+            return false;
+        }
+        else{
+            alert("校验成功，之后进行提交");
+            return true;
+        }
+    
+    </script>
     </head>
     <body>
 
-    <form action="abc.txt" method="GET" target="_self" enctype="text/plain">
-        文本输入<input type="text" name="a"><br/>
-        密码<input type="password" name="b"><br/>
-
-        <input type="submit" value="提交"><br />
+    <form action="abc.txt" method="post" enctype="application/x-www-form-urlencoded" onsubmit="return myFunction()">
+        文本输入<input type="text" name="a" id="text"><br/>
+        密码<input type="password" name="b" id="password"><br/>
+        <input type="submit" value="提交" id="submit"><br />
+        <input type="reset"><br />
     </form>
-                
-       <form action="abc.txt" method="POST" target="_blank">  
+
+              
+    
+
+
+    
+       <form action="abc.txt" method="POST">  
             <input type="radio" value="male" name="sex">Male<br />
             <input type="radio" value="female" name="sex">female<br />
             <input type="checkbox" value="bike" name="e">I have a Bike<br />
@@ -22,11 +51,13 @@
                 <option value="3">3</option>
             </select>
             <input type="submit" value="提交" name="h"><br />
+            <input type="reset"><br />
          </form>
             
-        <form action="abc" target="_parent">
-             <input type="file">
-             <input type="submit" value="提交"><br />        
+        <form action="abc.txt" method="post" enctype="multipart/form-data">
+             <input type="file" name="ss">
+             <input type="submit" value="提交"><br /> 
+             <input type="reset"><br />       
         </form>
   
  
